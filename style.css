@@ -1343,3 +1343,296 @@ header.rolando {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(34, 197, 94, 0.30);
 }
+
+/* ========================================
+   CARD PROMOCIONAL - HERO
+======================================== */
+
+.hero-promocao {
+    width: 360px;
+    padding: 30px;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.96),
+            rgba(8, 47, 73, 0.85)
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(56, 189, 248, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Brilho decorativo */
+
+.hero-promocao::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(56, 189, 248, 0.12);
+    border-radius: 50%;
+
+    top: -90px;
+    right: -70px;
+
+    filter: blur(20px);
+}
+
+
+/* Selo */
+
+.promocao-selo {
+    width: fit-content;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+
+    color: #38bdf8;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* Título */
+
+.hero-promocao h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+
+/* Preço */
+
+.promocao-preco {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+
+.promocao-preco strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #38bdf8;
+
+    font-size: 42px;
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+/* Vagas */
+
+.promocao-vagas {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    line-height: 1.5;
+}
+
+
+.promocao-vagas strong {
+    color: #ffffff;
+}
+
+
+/* Benefícios */
+
+.promocao-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+}
+
+
+.promocao-beneficios span {
+    display: block;
+}
+
+
+/* Botão */
+
+.btn-promocao {
+    display: block;
+
+    padding: 14px 18px;
+
+    margin-top: 4px;
+
+    border-radius: 10px;
+
+    background: #22c55e;
+
+    color: #ffffff;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.btn-promocao:hover {
+    transform: translateY(-3px);
+
+    background: #16a34a;
+
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+}
+
+
+/* Vagas limitadas */
+
+.hero-promocao small {
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+/* ========================================
+   ACABAMENTO DO CARD PROMOCIONAL
+======================================== */
+
+.hero-promocao {
+    width: 390px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation: brilho-promocao 3s ease-in-out infinite;
+}
+
+
+/* Pequeno destaque ao passar o mouse */
+
+.hero-promocao:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(56, 189, 248, 0.65);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4),
+        0 0 35px rgba(56, 189, 248, 0.15);
+}
+
+
+/* Destaque para os 20 primeiros clientes */
+
+.promocao-vagas strong {
+    display: inline-block;
+
+    margin-top: 6px;
+    padding: 5px 10px;
+
+    color: #38bdf8;
+
+    background: rgba(56, 189, 248, 0.10);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 7px;
+
+    font-weight: 700;
+}
+
+
+/* Animação suave do card */
+
+@keyframes brilho-promocao {
+
+    0%,
+    100% {
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.35),
+            0 0 15px rgba(56, 189, 248, 0.05);
+    }
+
+    50% {
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.35),
+            0 0 30px rgba(56, 189, 248, 0.16);
+    }
+}
+
+/* ========================================
+   HERO + PROMOÇÃO - MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    #inicio {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+    }
+
+    .hero-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-promocao {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin: 10px 0 0 0;
+        padding: 25px 22px;
+    }
+
+    .hero-promocao h2 {
+        font-size: 32px;
+    }
+
+    .promocao-preco strong {
+        font-size: 38px;
+    }
+
+    .btn-promocao {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
